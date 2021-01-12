@@ -1,0 +1,163 @@
+<%- include('partials/header') -%>
+
+  <!-- Splash -->
+
+  <div class="container-fluid splash text-center">
+
+    <h1 class="intro">Hello, I'm Luiz</h1>
+    <h2 class="intro">Data Science Consultant and Full-Stack Web Developer</h2>
+    <button class="btn btn-outline-light btn-sm intro show-button" type="button" name="button" onclick="window.location='#about';">Let me show you</button>
+  </div>
+
+<!-- About -->
+
+  <div class="container-fluid quick-about" id="about">
+
+    <h1 class="intro">About</h1>
+
+    <div class="row">
+
+      <div class="col-md text-center">
+
+        <i class="fas fa-user-check about-icon"></i>
+
+        <h2 class="about-col">Who am I?</h2>
+
+        <p>Originally an Economist. Currently working as a Data Science Consultant, actively learning web development and building projects (such as this website!) to explore different technologies.</p>
+
+        <button class="btn btn-sm btn-outline-dark about-btn" type="button" name="button" onclick="window.location='#top';">Full CV</button>
+
+      </div>
+
+      <div class="col-md text-center">
+
+        <i class="fas fa-atom about-icon"></i>
+
+        <h2 class="about-col">Data Science Skills</h2>
+
+        <ul>
+
+          <li>Data Cleaning and Treatment</li>
+          <li>Supervised and Unsupervised Machine Learning Models</li>
+          <li>Statistical Models (Regression, ARIMA, etc.)</li>
+          <li>Report Generation and Database Integration</li>
+          <li>SQL and NoSQL Data Manipulation</li>
+
+        </ul>
+
+      </div>
+
+      <div class="col-md text-center">
+
+        <i class="fas fa-laptop-code about-icon"></i>
+
+        <h2 class="about-col">Full-Stack Web Dev Skills</h2>
+
+        <ul>
+
+          <li>Front-end Design (HTML and CSS + Bootstrap)</li>
+          <li>Front-end Dynamism (JavaScript + jQuery)</li>
+          <li>Back-end Server Configuration (Node.js + Express)</li>
+          <li>Dynamic Generation of Webpages (EJS)</li>
+          <li>Database Integration (mySQL and MongoDB + Mongoose)</li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Projects -->
+
+  <div class="container-fluid projects-container">
+
+    <h1 class="intro" id="projects">Projects</h1>
+
+    <div id="carouselExampleCaptions" class="carousel slide project-carousel-main" data-bs-ride="carousel">
+
+      <ol class="carousel-indicators">
+        <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"></li>
+        <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"></li>
+        <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"></li>
+      </ol>
+
+      <div class="carousel-inner">
+
+        <div class="carousel-item active">
+          <img src="images/website_splash.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5 class="carousel-title">Personal Website</h5>
+            <p class="carousel-description">This website was built using front and back-end technologies</p>
+            <button class="btn btn-sm btn-outline-light carousel-btn" type="button" name="button" onclick="window.location='#top';">Know More</button>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <img src="images/website_splash.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5 class="carousel-title">Second project</h5>
+            <p class="carousel-description">Second project description</p>
+            <button class="btn btn-sm btn-outline-light carousel-btn" type="button" name="button" onclick="window.location='#top';">Know More</button>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <img src="images/website_splash.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5 class="carousel-title">Third project</h5>
+            <p class="carousel-description">Third project description</p>
+            <button class="btn btn-sm btn-outline-light carousel-btn" type="button" name="button" onclick="window.location='#top';">Know More</button>
+          </div>
+        </div>
+
+      </div>
+
+      <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </a>
+
+      <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </a>
+
+    </div>
+
+  </div>
+
+  <!-- Contact -->
+
+  <div class="container-fluid contact-container" id="contact">
+
+    <h1 class="intro">Contact</h1>
+
+    <form class="contact-form">
+
+    <div class="mb-3">
+      <label class="form-label">Name</label>
+      <input type="text" class="form-control">
+
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Email</label>
+      <input type="email" class="form-control">
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Message</label>
+      <textarea class="form-control" name="name" rows="4" cols="60"></textarea>
+    </div>
+
+    <div class="submit-btn">
+      <button type="submit" class="btn btn-outline-dark btn-sm contact-btn">Submit</button>
+    </div>
+
+  </form>
+
+  </div>
+
+<%- include('partials/footer') -%>
