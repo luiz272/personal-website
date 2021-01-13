@@ -25,6 +25,14 @@ app.listen(3000, function(){
 
 app.get('/', function(req, res) {
 
-  res.render('main', {});
+  res.render('main', {page:'main'});
+
+});
+
+// CV Get //
+
+app.get('/cv', function(req, res) {
+
+  res.render('cv', {page:'cv'});
 
 });
