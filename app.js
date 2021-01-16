@@ -12,7 +12,11 @@ const app = express();
 
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended:true}));
-app.use(express.static('public'));
+
+app.use(express.static(__dirname + '/public'));
+app.use('/en', express.static(__dirname + '/public'));
+app.use('/pt', express.static(__dirname + '/public'));
+app.use('/hu', express.static(__dirname + '/public'));
 
 mongoose.connect('mongodb://localhost:27017/personalSiteDB', {useNewUrlParser:true, useUnifiedTopology: true});
 
@@ -20,35 +24,92 @@ app.listen(3000, function(){
   console.log('Server running on port 3000');
 });
 
+// Schemas and Models //
+
+const mainPageSchema = {
+    page:String,
+    language:String,
+    intro: {
+      main: String,
+      sub: String,
+      btn: String
+    },
+    about: {
+      title: String,
+      item1: {
+        title: String,
+        text: String,
+        btn: String
+      },
+      item2: {
+        title: String,
+        list: {
+          item1: String,
+          item2: String,
+          item3: String,
+          item4: String,
+          item5: String,
+        }
+      },
+      item3: {
+        title: String,
+        list: {
+          item1: String,
+          item2: String,
+          item3: String,
+          item4: String,
+          item5: String,
+        }
+      }
+    },
+    projects: {
+      title: String,
+      item1: {
+        title: String,
+        description: String
+      },
+      item2: {
+        title: String,
+        description: String
+      },
+      item3: {
+        title: String,
+        description: String
+      },
+      btn: String
+    },
+    contact: {
+      title: String,
+      name: String,
+      email: String,
+      message: String,
+      btn: String
+    }
+  };
+
+const MainPageModel = mongoose.model('main',mainPageSchema,'main');
+
 // Features //
-// Main Get //
+// Main Get - Root //
 
 app.get('/', function(req, res) {
 
-  const mainPageSchema = {
-      page:String,
-      language:String,
-      intro: {
-        main: String,
-        sub: String,
-        btn: String
-      }
-    };
+  res.redirect('/en');
 
-  const MainPageModel = mongoose.model('main',mainPageSchema,'main');
+});
 
-  MainPageModel.find({}, function(err, results) {
+// Main Get - Language Specific //
+
+app.get('/:lang', function(req, res) {
+
+  MainPageModel.find({language:req.params.lang.toUpperCase()}, function(err, results) {
 
     if (err) {
       console.log(err);
     } else {
       res.render('main',
         {
-          page: results[0].page,
-          language: results[0].language,
-          introTitle: results[0].intro.main,
-          introSubtitle: results[0].intro.sub,
-          introButton: results[0].intro.btn
+          mainSource: results[0]
         }
       );
     }
@@ -59,7 +120,7 @@ app.get('/', function(req, res) {
 
 // CV Get //
 
-app.get('/cv', function(req, res) {
+app.get('/:lang/cv', function(req, res) {
 
   res.render('cv', {page:'cv'});
 
