@@ -5,28 +5,28 @@
   <!-- <h1>CV</h1> -->
 
   <!-- About me -->
-  <h1>Luiz Felipe Coelho de Oliveira Lima</h1>
+  <h1><%=mainSource.name%></h1>
 
-  <p>25 years old</p>
-  <p>Hungarian-Brazilian</p>
-  <p>Lives in São Paulo, Brazil</p>
-  <p>From São Paulo, Brazil</p>
+  <p><%=mainSource.intro.age%></p>
+  <p><%=mainSource.intro.nationality%></p>
+  <p><%=mainSource.intro.location%></p>
+  <p><%=mainSource.intro.homecity%></p>
 
   <!-- Education -->
-  <h3>Education</h3>
+  <h3><%=mainSource.education.title%></h3>
   <p class="near-collapse">
-    BA in Economics - Getulio Vargas Foundation (FGV/EESP) (2014 - 2018)
+    <%=mainSource.education.bachelors%>
     <a class="btn btn-outline-light btn-sm cert-btn inlist-chev" type="button" >
       <!-- <i class="fas fa-chevron-right"></i> View Diploma -->
     </a>
   </p>
 
-  <!-- Work Experience -->
+  <!-- Work Experience - TO DO: Add section title to JSON file -->
   <h3>Work Experience</h3>
 
   <!-- MS -->
   <p class="near-collapse">
-    Data Science Consultant at Management Solutions (mar/19 - today)
+    <%=mainSource.work.ms.title%>
     <button class="btn btn-outline-light btn-sm cv-btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMSDesc" >
       <i class="fas fa-chevron-down"></i>
     </button>
@@ -34,95 +34,77 @@
 
   <div class="collapse" id="collapseMSDesc">
     <div class="card card-body cv-card">
-      <p>Here are some of the projects I've participated</p>
+      <p><%=mainSource.work.ms.description%></p>
       <ul>
 
-        <!-- <li>
-          Climate Risk to Physical Assets Assessment with AI in the Telecom industry
-          <button class="btn btn-outline-light btn-sm cv-btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseP5Desc" >
-            <i class="fas fa-chevron-down"></i>
-          </button>
-
-          <div class="collapse" id="collapseP5Desc">
-            <div class="card card-body cv-card">
-              <p>Period: Jan/21 - today</p>
-              <p>Role: Lead Developer and Data Scientist</p>
-              <p>Technologies utilized:</p>
-              <p>Python</p>
-              <p>Description</p>
-              <p>Estimating the financial and operational impact through the quantification of climate-related risks using machine learning models.</p>
-            </div>
-          </div>
-        </li> -->
-
         <li>
-          Development of a B2B client profitability framework in the Telecom industry
+          <%=mainSource.work.ms.project4.title%>
           <button class="btn btn-outline-light btn-sm cv-btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseP4Desc" >
             <i class="fas fa-chevron-down"></i>
           </button>
 
           <div class="collapse" id="collapseP4Desc">
             <div class="card card-body cv-card">
-              <p>Period: Nov/20 - today</p>
-              <p>Role: Team Leader, Lead Technical Consultant and Lead Business Consultant</p>
-              <p>Technologies utilized:</p>
+              <p><%=mainSource.work.ms.project4.period%></p>
+              <p><%=mainSource.work.ms.project4.role%></p>
+              <p><%=mainSource.work.ms.project4.technologies%></p>
               <p>Microsoft SQL Server</p>
-              <p>Description</p>
-              <p>Development of a client profitability framework based on cost allocation. Tasks range from understanding cost business logic for client allocation to data gathering and model development.</p>
+              <p><%=mainSource.work.ms.project4.descTitle%></p>
+              <p><%=mainSource.work.ms.project4.descBody%></p>
             </div>
           </div>
         </li>
 
         <li>
-          Development of a B2C client profitability framework in the Telecom industry
+          <%=mainSource.work.ms.project3.title%>
           <button class="btn btn-outline-light btn-sm cv-btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseP3Desc" >
             <i class="fas fa-chevron-down"></i>
           </button>
 
           <div class="collapse" id="collapseP3Desc">
             <div class="card card-body cv-card">
-              <p>Period: Dez/19 - Nov/20</p>
-              <p>Role: Business and Technical Consultant</p>
-              <p>Technologies utilized:</p>
+              <p><%=mainSource.work.ms.project3.period%></p>
+              <p><%=mainSource.work.ms.project3.role%></p>
+              <p><%=mainSource.work.ms.project3.technologies%></p>
               <p>Hadoop (Hive)</p>
-              <p>Description</p>
-              <p>Development of a client profitability framework based on cost allocation. Tasks range from understanding cost business logic for client allocation to data gathering and model development.</p>
+              <p><%=mainSource.work.ms.project3.descTitle%></p>
+              <p><%=mainSource.work.ms.project3.descBody%></p>
             </div>
           </div>
         </li>
 
         <li>
-          Redesign and automation of HR compensation and employee movement processes in the Telecom industry
+          <%=mainSource.work.ms.project2.title%>
           <button class="btn btn-outline-light btn-sm cv-btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseP2Desc" >
             <i class="fas fa-chevron-down"></i>
           </button>
 
           <div class="collapse" id="collapseP2Desc">
             <div class="card card-body cv-card">
-              <p>Period: Aug/19 - Dez/19</p>
-              <p>Role: Business and Technical Consultant</p>
-              <p>Technologies utilized:</p>
+              <p><%=mainSource.work.ms.project2.period%></p>
+              <p><%=mainSource.work.ms.project2.role%></p>
+              <p><%=mainSource.work.ms.project2.technologies%></p>
               <p>.NET Framework (Visual Basic) and Microsoft SQL Server</p>
-              <p>Description</p>
-              <p>Redesign of existing HR compensation and employee movement processes to fit a new, more efficient, automated process utilizing a software developed in the .NET Framework with Microsoft SQL Server integration.</p>
+              <p><%=mainSource.work.ms.project2.descTitle%></p>
+              <p><%=mainSource.work.ms.project2.descBody%></p>
             </div>
           </div>
         </li>
 
         <li>
-          Development of algorithm for automated detection of relevant information in the financial/banking industry
+          <%=mainSource.work.ms.project1.title%>
           <button class="btn btn-outline-light btn-sm cv-btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseP1Desc" >
             <i class="fas fa-chevron-down"></i>
           </button>
 
           <div class="collapse" id="collapseP1Desc">
             <div class="card card-body cv-card">
-              <p>Period: Mar/19 - Jul/19</p>
-              <p>Role: Data Science Consultant</p>
-              <p>Technologies utilized:</p>
+              <p><%=mainSource.work.ms.project1.period%></p>
+              <p><%=mainSource.work.ms.project1.role%></p>
+              <p><%=mainSource.work.ms.project1.technologies%></p>
               <p>SAS, Excel VBA</p>
-              <p>Description</p>
-              <p>Development of an algorithm for early detection of events that had to be reviewed by an analyst. Increased efficiency of manual analysis by reducing false positive cases via classification through a Scorecard.</p>
+              <p><%=mainSource.work.ms.project1.descTitle%></p>
+              <p><%=mainSource.work.ms.project1.descBody%></p>
             </div>
           </div>
         </li>
@@ -134,7 +116,7 @@
   <!-- XP -->
 
   <p class="near-collapse">
-    Intern at XP Insurance Brokerage Firm (jan/18 - may/18)
+    <%=mainSource.work.xp.title%>
     <button class="btn btn-outline-light btn-sm cv-btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseXPDesc" >
       <i class="fas fa-chevron-down"></i>
     </button>
@@ -143,9 +125,9 @@
   <div class="collapse" id="collapseXPDesc">
     <div class="card card-body cv-card">
       <ul>
-        <li>Operational – receival, analysis and forwarding of proposals, solving operational problems together with the insurance companies and independent investment brokers (IIBs), support to the commercial team and middle office, forwarding of claim notices</li>
-        <li>Products – analysis of new and existing products (projection and comparison of earnings for both the brokerage firm and the IIBs)</li>
-        <li>Commercial – initiating contact with customers and IIBs to receive feedback regarding the services and products offered, production of informational material to facilitate distribution of products among customers and IIBs</li>
+        <li><%=mainSource.work.xp.item1%></li>
+        <li><%=mainSource.work.xp.item2%></li>
+        <li><%=mainSource.work.xp.item3%></li>
       </ul>
     </div>
   </div>
@@ -153,7 +135,7 @@
   <!-- B3 -->
 
   <p class="near-collapse">
-    Summer Intern at B3 (jul/17)
+    <%=mainSource.work.b3.title%>
     <button class="btn btn-outline-light btn-sm cv-btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseB3Desc" >
       <i class="fas fa-chevron-down"></i>
     </button>
@@ -161,17 +143,17 @@
 
   <div class="collapse" id="collapseB3Desc">
     <div class="card card-body cv-card">
-      <p>Project: development of a benchmark considering all products traded in the exchanges of stocks and derivatives of the B3 company</p>
-      <p>Objective: to identify growth drivers via comparison to similar exchanges</p>
+      <p><%=mainSource.work.b3.project%></p>
+      <p><%=mainSource.work.b3.objective%></p>
     </div>
   </div>
 
   <!-- Academic Experience -->
-  <h3>Academic Experience</h3>
+  <h3><%=mainSource.academicExperience.title%></h3>
 
   <!-- Scientific Initiation -->
   <p class="near-collapse">
-    Scientific Initiation at CEPESP/FGV (may/17 - feb/18)
+    <%=mainSource.academicExperience.si.title%>
     <button class="btn btn-outline-light btn-sm cv-btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSIDesc" >
       <i class="fas fa-chevron-down"></i>
     </button>
@@ -179,14 +161,14 @@
 
   <div class="collapse" id="collapseSIDesc">
     <div class="card card-body cv-card">
-      <p>Project: Secretary appointments and the Formation of Party Coalitions in the Legislative of the State of São Paulo</p>
-      <p>Main activities: automating the gathering of data from the website of the Supreme Electoral Court (VBA), cleaning and merging of the different datasets (party associates, candidates and secretaries for each state – done in Stata), development of a report that analyses how the party association of the secretaries for each electoral period compares to the composition of the respective winning party coalitions</p>
+      <p><%=mainSource.academicExperience.si.project%></p>
+      <p><%=mainSource.academicExperience.si.activities%></p>
     </div>
   </div>
 
   <!-- Teacher's Assistant -->
   <p class="near-collapse">
-    Programming Teacher's Assistant at FGV (feb/15 - apr/15)
+    <%=mainSource.academicExperience.ta.title%>
     <button class="btn btn-outline-light btn-sm cv-btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTADesc" >
       <i class="fas fa-chevron-down"></i>
     </button>
@@ -194,28 +176,28 @@
 
   <div class="collapse" id="collapseTADesc">
     <div class="card card-body cv-card">
-      <p>Activities: Helping students with programming assignments (mostly Excel VBA and MatLab). Explaining programming concepts in addendum to regular classes.</p>
+      <p><%=mainSource.academicExperience.ta.activities%></p>
     </div>
   </div>
 
-  <!-- Technologies -->
+  <!-- Technologies - TO DO: Add section title to JSON file -->
   <h3>Technologies</h3>
 
   <ul>
 
     <!-- Data Science -->
     <li class="near-collapse">
-      Data Science
+      <%=mainSource.technologies.dataScience.title%>
       <button class="btn btn-outline-light btn-sm cv-btn inlist-chev" type="button" data-bs-toggle="collapse" data-bs-target="#collapseML" >
         <i class="fas fa-chevron-down"></i>
       </button>
 
       <div class="collapse" id="collapseML">
         <div class="card card-body cv-card">
-          <p>Supervised and Unsupervised Machine Learning Models Training and Implementation (Predictive)</p>
-          <p>Statistical and Econometric Model Application for Business Problems (Explanative)</p>
+          <p><%=mainSource.technologies.dataScience.item1%></p>
+          <p><%=mainSource.technologies.dataScience.item2%></p>
           <img src="images/python.svg" alt="" height="100" width="100">
-          <p>Numpy, Pandas, TensorFlow</p>
+          <p>Numpy, Pandas</p>
         </div>
       </div>
 
@@ -223,7 +205,7 @@
 
     <!-- Web Development -->
     <li class="near-collapse">
-      Web Development
+      <%=mainSource.technologies.webDev.title%>
       <button class="btn btn-outline-light btn-sm cv-btn inlist-chev" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWD" >
         <i class="fas fa-chevron-down"></i>
       </button>
@@ -256,7 +238,7 @@
 
     <!-- Databases -->
     <li class="near-collapse">
-      Databases and Big Data
+      <%=mainSource.technologies.db.title%>
       <button class="btn btn-outline-light btn-sm cv-btn inlist-chev" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDB" >
         <i class="fas fa-chevron-down"></i>
       </button>
@@ -279,7 +261,7 @@
 
     <!-- Miscellaneous Tools -->
     <li class="near-collapse">
-      Miscellaneous Tools
+      <%=mainSource.technologies.misc.title%>
       <button class="btn btn-outline-light btn-sm cv-btn inlist-chev" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMisc" >
         <i class="fas fa-chevron-down"></i>
       </button>
@@ -287,10 +269,10 @@
       <div class="collapse" id="collapseMisc">
         <div class="card card-body cv-card">
           <ul>
-            <li>Microsoft Office Package - Excel (including VBA), Word, PowerPoint and Outlook</li>
-            <li>Power BI - DAX and Dashboard creation</li>
-            <li>BASH</li>
-            <li>PowerShell</li>
+            <li><%=mainSource.technologies.misc.item1%></li>
+            <li><%=mainSource.technologies.misc.item2%></li>
+            <li><%=mainSource.technologies.misc.item3%></li>
+            <li><%=mainSource.technologies.misc.item4%></li>
           </ul>
         </div>
       </div>
@@ -300,42 +282,42 @@
   </ul>
 
   <!-- Languages -->
-  <h3>Languages</h3>
+  <h3><%=mainSource.languages.title%></h3>
   <ul>
-    <li class="near-collapse">Portuguese - Native</li>
-    <li class="near-collapse">English - Fluent</li>
-    <li class="near-collapse">Hungarian - Intermediate</li>
-    <li class="near-collapse">Spanish - Intermediate</li>
+    <li class="near-collapse"><%=mainSource.languages.pt%></li>
+    <li class="near-collapse"><%=mainSource.languages.en%></li>
+    <li class="near-collapse"><%=mainSource.languages.hu%></li>
+    <li class="near-collapse"><%=mainSource.languages.es%></li>
   </ul>
 
   <!-- Honors & Awards -->
-  <h3>Awards</h3>
+  <h3><%=mainSource.awards.title%></h3>
 
   <ul>
 
     <li class="near-collapse">
-      10th Best of the Year Prize EESP/FGV – Valuation – 1st place (2018)
+      <%=mainSource.awards.valuation%>
       <a class="btn btn-outline-light btn-sm cert-btn inlist-chev" type="button" >
         <!-- <i class="fas fa-chevron-right"></i> View Certificate -->
       </a>
     </li>
 
     <li class="near-collapse">
-      9th Best of the Year Prize EESP/FGV – Monography – 3rd place (2017)
+      <%=mainSource.awards.monography%>
       <a class="btn btn-outline-light btn-sm cert-btn inlist-chev" type="button" >
         <!-- <i class="fas fa-chevron-right"></i> -->
       </a>
     </li>
 
     <li class="near-collapse">
-      8th Best of the Year Prize EESP/FGV – Project (Macroeconomics) – 1st place (2016)
+      <%=mainSource.awards.macroeconomics%>
       <a class="btn btn-outline-light btn-sm cert-btn inlist-chev" type="button" >
         <!-- <i class="fas fa-chevron-right"></i> -->
       </a>
     </li>
 
     <li class="near-collapse">
-      7th Best of the Year Prize EESP/FGV – Project (Microeconomics) – 1st place (2015)
+      <%=mainSource.awards.microeconomics%>
       <a class="btn btn-outline-light btn-sm cert-btn inlist-chev" type="button" >
         <!-- <i class="fas fa-chevron-right"></i> -->
       </a>
@@ -344,30 +326,30 @@
   </ul>
 
   <!-- Courses, Certifications and Events -->
-  <h3>Courses, Certifications and Events</h3>
+  <h3><%=mainSource.courses.title%></h3>
 
   <ul>
 
     <li class="near-collapse">
-      Insurance Broker certification – Every type (FUNENSEG) (2018)
+      <%=mainSource.courses.insurance%>
       <a class="btn btn-outline-light btn-sm cert-btn inlist-chev" type="button" >
         <!-- <i class="fas fa-chevron-right"></i> -->
       </a>
     </li>
 
     <li class="near-collapse">
-      Atendee at ODSC Europe - Open Data Science Conference (London, United Kingdom) (2017)
+      <%=mainSource.courses.odsc%>
     </li>
 
     <li class="near-collapse">
-      Russian course at Pushkin State Russian Language Institute (96h) (Moscow, Russia) (2015)
+      <%=mainSource.courses.pushkin%>
       <a class="btn btn-outline-light btn-sm cert-btn inlist-chev" type="button" >
         <!-- <i class="fas fa-chevron-right"></i> -->
       </a>
     </li>
 
     <li class="near-collapse">
-      Introduction to Programming Logic at Impacta (40h) (2012)
+      <%=mainSource.courses.impacta%>
       <a class="btn btn-outline-light btn-sm cert-btn inlist-chev" type="button" >
         <!-- <i class="fas fa-chevron-right"></i> -->
       </a>
@@ -375,38 +357,7 @@
 
   </ul>
 
-  <!-- Voluntary Work -->
-  <!-- <h3>Voluntary Work</h3> -->
-
-  <!-- Social Action -->
-  <!-- <p class="near-collapse">
-    Social Action Participant at Management Solutions (2019 - today)
-    <button class="btn btn-outline-light btn-sm cv-btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSADesc" >
-      <i class="fas fa-chevron-down"></i>
-    </button>
-  </p>
-
-  <div class="collapse" id="collapseSADesc">
-    <div class="card card-body cv-card">
-      <p>Insert details here </p>
-    </div>
-  </div> -->
-
-  <!-- EESP Ensina -->
-  <!-- <p class="near-collapse">
-    Game Theory Coordinator at the 1st Economics Course for High School Students at the Project EESP/Ensina (2016)
-    <button class="btn btn-outline-light btn-sm cv-btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEEDesc" >
-      <i class="fas fa-chevron-down"></i>
-    </button>
-  </p>
-
-  <div class="collapse" id="collapseEEDesc">
-    <div class="card card-body cv-card">
-      <p>Insert details here </p>
-    </div>
-  </div> -->
-
-  <p>I provide prospective employers and clients with certificates for every course, certification and award upon request.</p>
+  <p><%=mainSource.disclaimer%></p>
 
 </div>
 

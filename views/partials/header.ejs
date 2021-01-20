@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang=<%=mainSource.language.toLowerCase()%> dir="ltr">
 
   <head>
 
     <meta charset="utf-8">
-    <title>Personal Website - Luiz</title>
+    <title><%=headerSource.pageTitle%></title>
 
     <!-- Bootstrap Modules -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
@@ -27,26 +27,56 @@
 
       <form class="container-fluid justify-content-start">
 
-        <button class="btn btn-outline-light nav-btn" type="button" onclick="window.location='#top';">Home</button>
-        <button class="btn btn-outline-light nav-btn" type="button" onclick="window.location='#about';">About</button>
-        <button class="btn btn-outline-light nav-btn" type="button" onclick="window.location='#projects';">Projects</button>
-        <button class="btn btn-outline-light nav-btn" type="button" onclick="window.location='#contact';">Contact</button>
+        <% if (mainSource.page.toLowerCase() === 'main') { %>
+
+          <a class="btn btn-outline-light nav-btn" href="#top"><%=headerSource.navbar.home%></a>
+          <a class="btn btn-outline-light nav-btn" href="#about"><%=headerSource.navbar.about%></a>
+          <a class="btn btn-outline-light nav-btn" href="#projects"><%=headerSource.navbar.projects%></a>
+          <a class="btn btn-outline-light nav-btn" href="#contact"><%=headerSource.navbar.contact%></a>
+
+        <% } else { %>
+
+        <a class="btn btn-outline-light nav-btn" href=<%='/'+headerSource.language.toLowerCase()+'#top'%> ><%=headerSource.navbar.home%></a>
+        <a class="btn btn-outline-light nav-btn" href=<%='/'+headerSource.language.toLowerCase()+'#about'%> ><%=headerSource.navbar.about%></a>
+        <a class="btn btn-outline-light nav-btn" href=<%='/'+headerSource.language.toLowerCase()+'#projects'%> ><%=headerSource.navbar.projects%></a>
+        <a class="btn btn-outline-light nav-btn b" href=<%='/'+headerSource.language.toLowerCase()+'#contact'%> ><%=headerSource.navbar.contact%></a>
+
+        <% } %>
 
       </form>
 
       <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+
        <ul class="navbar-nav language-selector">
+
          <li class="nav-item dropdown">
+
            <a class="nav-link dropdown-toggle dropdown-nav" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
              Language
            </a>
+
            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-             <li class="nav-li"><a class="dropdown-item dropdown-nav" href="/en"><img class="flag" src="images/gb_flag.png">English</a></li>
-             <li class="nav-li"><a class="dropdown-item dropdown-nav" href="/hu"><img class="flag" src="images/hu_flag.png">Magyar</a></li>
-             <li class="nav-li"><a class="dropdown-item dropdown-nav" href="/pt"><img class="flag" src="images/br_flag.png">Português</a></li>
+
+            <% if (mainSource.page.toLowerCase() === 'main') { %>
+
+              <li class="nav-li"><a class="dropdown-item dropdown-nav" href="/en"><img class="flag" src="images/gb_flag.png">English</a></li>
+              <li class="nav-li"><a class="dropdown-item dropdown-nav" href="/hu"><img class="flag" src="images/hu_flag.png">Magyar</a></li>
+              <li class="nav-li"><a class="dropdown-item dropdown-nav" href="/pt"><img class="flag" src="images/br_flag.png">Português</a></li>
+
+            <% } else { %>
+
+              <li class="nav-li"><a class="dropdown-item dropdown-nav" href=<%='/en/' + mainSource.page.toLowerCase()%>><img class="flag" src="images/gb_flag.png">English</a></li>
+              <li class="nav-li"><a class="dropdown-item dropdown-nav" href=<%='/hu/' + mainSource.page.toLowerCase()%>><img class="flag" src="images/hu_flag.png">Magyar</a></li>
+              <li class="nav-li"><a class="dropdown-item dropdown-nav" href=<%='/pt/' + mainSource.page.toLowerCase()%>><img class="flag" src="images/br_flag.png">Português</a></li>
+
+            <% } %>
+
            </ul>
+
          </li>
+
        </ul>
+
       </div>
 
     </nav>
