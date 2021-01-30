@@ -35,7 +35,7 @@
   <div class="collapse" id="collapseMSDesc">
     <div class="card card-body cv-card">
       <p><%=mainSource.work.ms.description%></p>
-      <ul>
+      <ul class="no-bullet">
 
         <li>
           <%=mainSource.work.ms.project4.title%>
@@ -47,10 +47,8 @@
             <div class="card card-body cv-card">
               <p><%=mainSource.work.ms.project4.period%></p>
               <p><%=mainSource.work.ms.project4.role%></p>
-              <p><%=mainSource.work.ms.project4.technologies%></p>
-              <p>Microsoft SQL Server</p>
-              <p><%=mainSource.work.ms.project4.descTitle%></p>
-              <p><%=mainSource.work.ms.project4.descBody%></p>
+              <p><%=mainSource.work.ms.project4.technologies%> Microsoft SQL Server, Python, PowerShell</p>
+              <p><%=mainSource.work.ms.project4.descTitle%>: <%=mainSource.work.ms.project4.descBody%></p>
             </div>
           </div>
         </li>
@@ -65,10 +63,8 @@
             <div class="card card-body cv-card">
               <p><%=mainSource.work.ms.project3.period%></p>
               <p><%=mainSource.work.ms.project3.role%></p>
-              <p><%=mainSource.work.ms.project3.technologies%></p>
-              <p>Hadoop (Hive)</p>
-              <p><%=mainSource.work.ms.project3.descTitle%></p>
-              <p><%=mainSource.work.ms.project3.descBody%></p>
+              <p><%=mainSource.work.ms.project3.technologies%> Hadoop (Hive), Excel VBA</p>
+              <p><%=mainSource.work.ms.project3.descTitle%>: <%=mainSource.work.ms.project3.descBody%></p>
             </div>
           </div>
         </li>
@@ -83,10 +79,8 @@
             <div class="card card-body cv-card">
               <p><%=mainSource.work.ms.project2.period%></p>
               <p><%=mainSource.work.ms.project2.role%></p>
-              <p><%=mainSource.work.ms.project2.technologies%></p>
-              <p>.NET Framework (Visual Basic) and Microsoft SQL Server</p>
-              <p><%=mainSource.work.ms.project2.descTitle%></p>
-              <p><%=mainSource.work.ms.project2.descBody%></p>
+              <p><%=mainSource.work.ms.project2.technologies%> .NET Framework (Visual Basic) and Microsoft SQL Server</p>
+              <p><%=mainSource.work.ms.project2.descTitle%>: <%=mainSource.work.ms.project2.descBody%></p>
             </div>
           </div>
         </li>
@@ -101,10 +95,8 @@
             <div class="card card-body cv-card">
               <p><%=mainSource.work.ms.project1.period%></p>
               <p><%=mainSource.work.ms.project1.role%></p>
-              <p><%=mainSource.work.ms.project1.technologies%></p>
-              <p>SAS, Excel VBA</p>
-              <p><%=mainSource.work.ms.project1.descTitle%></p>
-              <p><%=mainSource.work.ms.project1.descBody%></p>
+              <p><%=mainSource.work.ms.project1.technologies%> SAS, Excel VBA</p>
+              <p><%=mainSource.work.ms.project1.descTitle%>: <%=mainSource.work.ms.project1.descBody%></p>
             </div>
           </div>
         </li>
@@ -183,7 +175,7 @@
   <!-- Technologies - TO DO: Add section title to JSON file -->
   <h3>Technologies</h3>
 
-  <ul>
+  <ul class="no-bullet">
 
     <!-- Data Science -->
     <li class="near-collapse">
@@ -268,7 +260,7 @@
 
       <div class="collapse" id="collapseMisc">
         <div class="card card-body cv-card">
-          <ul>
+          <ul class="no-bullet">
             <li><%=mainSource.technologies.misc.item1%></li>
             <li><%=mainSource.technologies.misc.item2%></li>
             <li><%=mainSource.technologies.misc.item3%></li>
@@ -283,7 +275,7 @@
 
   <!-- Languages -->
   <h3><%=mainSource.languages.title%></h3>
-  <ul>
+  <ul class="no-bullet">
     <li class="near-collapse"><%=mainSource.languages.pt%></li>
     <li class="near-collapse"><%=mainSource.languages.en%></li>
     <li class="near-collapse"><%=mainSource.languages.hu%></li>
@@ -293,7 +285,7 @@
   <!-- Honors & Awards -->
   <h3><%=mainSource.awards.title%></h3>
 
-  <ul>
+  <ul class="no-bullet">
 
     <li class="near-collapse">
       <%=mainSource.awards.valuation%>
@@ -328,7 +320,7 @@
   <!-- Courses, Certifications and Events -->
   <h3><%=mainSource.courses.title%></h3>
 
-  <ul>
+  <ul class="no-bullet">
 
     <li class="near-collapse">
       <%=mainSource.courses.insurance%>
@@ -357,7 +349,7 @@
 
   </ul>
 
-  <p><%=mainSource.disclaimer%></p>
+  <p class="disclaimer"><%=mainSource.disclaimer%></p>
 
 </div>
 

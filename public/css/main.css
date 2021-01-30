@@ -266,3 +266,12 @@ footer a:hover {
   -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
   transform: rotate(180deg);
 }
+
+.no-bullet {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.disclaimer {
+  margin-top: 5%;
+}
