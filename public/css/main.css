@@ -154,6 +154,7 @@ h2.intro {
 
 .submit-btn {
   text-align:right;
+  padding:0.75%;
 }
 
 .contact-container input[type=email], .contact-container input[type=text], textarea.form-control {
@@ -165,6 +166,19 @@ h2.intro {
 textarea.form-control:focus {
   background-color: #d0d0d0;
   border-color: #9e9e9e;
+}
+
+label.form-label {
+  font-size: 1.4rem;
+}
+
+.contact-btn{
+  font-size: 1.4rem;
+}
+
+.contact-btn:hover{
+  background-color: #000000;
+  color:#FFFFFF;
 }
 
 /* Footer */
@@ -184,15 +198,17 @@ footer p {
 
 footer a {
   margin: 2% 1%;
-  color: white;
-}
-
-footer a:hover {
   color:#d0d0d0;
 }
 
+footer a:hover {
+  color: white;
+}
+
 .footer-icon {
-  font-size: 2rem;
+  font-size: 2.1rem;
+  padding-left: 1%;
+  padding-right: 1%;
 }
 
 /* CV */
@@ -244,8 +260,9 @@ footer a:hover {
   box-shadow: none;
 }
 
-.cert-btn {
+a.cert-btn {
   border: none;
+  font-size: 1.1rem;
 }
 
 .cert-btn:hover {

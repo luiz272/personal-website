@@ -17,9 +17,13 @@
   <p class="near-collapse">
     <a href="https://portal.fgv.br/en"><img src="images/logo_FGV2.png" alt="MS-logo" class="fgv-logo"></a>
     <%=mainSource.education.bachelors%>
-    <a class="btn btn-outline-light btn-sm cert-btn inlist-chev" type="button" >
-      <!-- <i class="fas fa-chevron-right"></i> View Diploma -->
+
+    <% if(lock=='false') {%>
+    <a class="btn btn-outline-light btn-sm cert-btn inlist-chev" type="button" href="cert/Diploma.pdf ">
+      <i class="fas fa-chevron-right"></i> View Diploma
     </a>
+    <% } %>
+
   </p>
 
   <!-- Work Experience -->
@@ -220,7 +224,7 @@
           <p><%=mainSource.technologies.dataScience.item1%></p>
           <p><%=mainSource.technologies.dataScience.item2%></p>
           <img src="images/python.svg" alt="" height="100" width="100">
-          <p>Numpy, Pandas</p>
+          <!-- <p>Numpy, Pandas</p> -->
         </div>
       </div>
 
@@ -263,13 +267,10 @@
             </div>
 
             <div class="col">
-              <!-- Style Express logo just like their website - https://expressjs.com/ -->
               <p class="express-logo">Express</p>
             </div>
 
           </div>
-
-          <!-- <img src="images/MongoDB.png" alt="" height="100" width="100"> -->
 
         </div>
       </div>
@@ -353,33 +354,49 @@
     <li class="near-collapse">
       <a href="https://portal.fgv.br/en"><img src="images/logo_FGV2.png" alt="MS-logo" class="fgv-logo"></a>
       <%=mainSource.awards.valuation%>
-      <a class="btn btn-outline-light btn-sm cert-btn inlist-chev" type="button" >
-        <!-- <i class="fas fa-chevron-right"></i> View Certificate -->
-      </a>
+
+        <% if(lock=='false') {%>
+          <a class="btn btn-outline-light btn-sm cert-btn inlist-chev" type="button" href="cert/10o_MelhoresAno.pdf">
+          <i class="fas fa-chevron-right"></i> View Certificate
+          </a>
+        <% } %>
+
     </li>
 
     <li class="near-collapse">
       <a href="https://portal.fgv.br/en"><img src="images/logo_FGV2.png" alt="MS-logo" class="fgv-logo"></a>
       <%=mainSource.awards.monography%>
-      <a class="btn btn-outline-light btn-sm cert-btn inlist-chev" type="button" >
-        <!-- <i class="fas fa-chevron-right"></i> -->
+
+      <% if(lock=='false') {%>
+      <a class="btn btn-outline-light btn-sm cert-btn inlist-chev" type="button" href="cert/9o_MelhoresAno.pdf">
+          <i class="fas fa-chevron-right"></i> View Certificate
       </a>
+      <% } %>
+
     </li>
 
     <li class="near-collapse">
       <a href="https://portal.fgv.br/en"><img src="images/logo_FGV2.png" alt="MS-logo" class="fgv-logo"></a>
       <%=mainSource.awards.macroeconomics%>
-      <a class="btn btn-outline-light btn-sm cert-btn inlist-chev" type="button" >
-        <!-- <i class="fas fa-chevron-right"></i> -->
+
+      <% if(lock=='false') {%>
+      <a class="btn btn-outline-light btn-sm cert-btn inlist-chev" type="button" href="cert/8o_MelhoresAno.pdf">
+          <i class="fas fa-chevron-right"></i> View Certificate
       </a>
+      <% } %>
+
     </li>
 
     <li class="near-collapse">
       <a href="https://portal.fgv.br/en"><img src="images/logo_FGV2.png" alt="MS-logo" class="fgv-logo"></a>
       <%=mainSource.awards.microeconomics%>
-      <a class="btn btn-outline-light btn-sm cert-btn inlist-chev" type="button" >
-        <!-- <i class="fas fa-chevron-right"></i> -->
+
+      <% if(lock=='false') {%>
+      <a class="btn btn-outline-light btn-sm cert-btn inlist-chev" type="button" href="cert/7o_MelhoresAno.pdf">
+          <i class="fas fa-chevron-right"></i> View Certificate
       </a>
+      <% } %>
+
     </li>
 
   </ul>
@@ -392,30 +409,49 @@
     <li class="near-collapse">
       <a href="https://www.ens.edu.br/"><img src="images/funenseg-escola-nacional-de-seguros.jpg" alt="MS-logo" class="award-logo"></a>
       <%=mainSource.courses.insurance%>
-      <a class="btn btn-outline-light btn-sm cert-btn inlist-chev" type="button" >
-        <!-- <i class="fas fa-chevron-right"></i> -->
+
+      <% if(lock=='false') {%>
+      <a class="btn btn-outline-light btn-sm cert-btn inlist-chev" type="button" href="cert/SUSEP.pdf">
+          <i class="fas fa-chevron-right"></i> View Certificate
       </a>
+      <% } %>
+
     </li>
 
     <li class="near-collapse">
       <a href="https://odsc.com/"><img src="images/odsc_logo.png" alt="MS-logo" class="award-logo gray-background2"></a>
       <%=mainSource.courses.odsc%>
+
+      <% if(lock=='false') {%>
+      <a class="btn btn-outline-light btn-sm cert-btn inlist-chev" type="button" href="cert/ODSC.pdf">
+          <i class="fas fa-chevron-right"></i> View Certificate
+      </a>
+      <% } %>
+
     </li>
 
     <li class="near-collapse">
       <a href="https://www.pushkin.institute/en/"><img src="images/pushkin_institute_logo_eng.png" alt="MS-logo" class="award-logo gray-background2"></a>
       <%=mainSource.courses.pushkin%>
-      <a class="btn btn-outline-light btn-sm cert-btn inlist-chev" type="button" >
-        <!-- <i class="fas fa-chevron-right"></i> -->
+
+      <% if(lock=='false') {%>
+      <a class="btn btn-outline-light btn-sm cert-btn inlist-chev" type="button" href="cert/pushkin.pdf">
+          <i class="fas fa-chevron-right"></i> View Certificate
       </a>
+      <% } %>
+
     </li>
 
     <li class="near-collapse">
       <a href="https://www.impacta.com.br/Online/"><img src="images/Impacta_Certificação_e_Treinamento.jpg" alt="MS-logo" class="award-logo"></a>
       <%=mainSource.courses.impacta%>
-      <a class="btn btn-outline-light btn-sm cert-btn inlist-chev" type="button" >
-        <!-- <i class="fas fa-chevron-right"></i> -->
+
+      <% if(lock=='false') {%>
+      <a class="btn btn-outline-light btn-sm cert-btn inlist-chev" type="button" href="cert/Impacta.pdf" >
+          <i class="fas fa-chevron-right"></i> View Certificate
       </a>
+      <% } %>
+
     </li>
 
   </ul>

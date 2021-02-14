@@ -294,7 +294,7 @@ app.get('/:lang/cv', function(req, res) {
         if (hErr) {
           console.log(hErr);
         } else {
-          res.render('cv', {mainSource:results[0], headerSource:hResults[0]});
+          res.render('cv', {mainSource:results[0], headerSource:hResults[0], lock:'true'});
         }
 
       });
@@ -302,5 +302,34 @@ app.get('/:lang/cv', function(req, res) {
     }
 
   });
+
+});
+
+
+// CV with Certificate Get //
+
+app.get('/:lang/cv/unlock', function(req, res) {
+
+  app.use('/' + req.params.lang.toLowerCase() + '/cv/unlock', express.static(__dirname + '/public'));
+
+  CVModel.find({language:req.params.lang.toUpperCase()}, function(err, results) {
+
+    if(err) {
+      console.log(err);
+    } else {
+
+      HeaderModel.find({language:req.params.lang.toUpperCase()}, function(hErr, hResults) {
+
+          if(hErr) {
+            console.log(hErr);
+          } else {
+            res.render('cv',{mainSource:results[0], headerSource:hResults[0], lock:'false'})
+          }
+
+      })
+
+    }
+
+  })
 
 });
