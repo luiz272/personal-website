@@ -118,6 +118,7 @@ const cvSchema = {
     bachelors:String
   },
   work:{
+    title:String,
     ms:{
       title:String,
       description:String,
@@ -156,9 +157,21 @@ const cvSchema = {
     },
     xp:{
       title:String,
-      item1:String,
-      item2:String,
-      item3:String
+      operational:{
+        title:String,
+        item1:String,
+        item2:String,
+        item3:String
+      },
+      products:{
+        title:String,
+        item1:String,
+      },
+      commercial:{
+        title:String,
+        item1:String,
+        item2:String
+      }
     },
     b3:{
       title:String,
@@ -171,7 +184,12 @@ const cvSchema = {
     si:{
       title:String,
       project:String,
-      activities:String
+      activities:{
+        title:String,
+        item1:String,
+        item2:String,
+        item3:String
+      }
     },
     ta:{
       title:String,
@@ -179,6 +197,7 @@ const cvSchema = {
     }
   },
   technologies:{
+    title:String,
     dataScience:{
       title:String,
       item1:String,

@@ -22,8 +22,8 @@
     </a>
   </p>
 
-  <!-- Work Experience - TO DO: Add section title to JSON file -->
-  <h3>Work Experience</h3>
+  <!-- Work Experience -->
+  <h3><%=mainSource.work.title%></h3>
 
   <!-- MS -->
   <p class="near-collapse">
@@ -39,7 +39,7 @@
       <p><%=mainSource.work.ms.description%></p>
       <ul class="no-bullet">
 
-        <li>
+        <li class="inner-li">
           <%=mainSource.work.ms.project4.title%>
           <button class="btn btn-outline-light btn-sm cv-btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseP4Desc" >
             <i class="fas fa-chevron-down"></i>
@@ -49,13 +49,13 @@
             <div class="card card-body cv-card">
               <p><%=mainSource.work.ms.project4.period%></p>
               <p><%=mainSource.work.ms.project4.role%></p>
-              <p><%=mainSource.work.ms.project4.technologies%> Microsoft SQL Server, Python, PowerShell</p>
+              <p><%=mainSource.work.ms.project4.technologies%> Microsoft SQL Server, Python, PowerShell, Power BI</p>
               <p><%=mainSource.work.ms.project4.descTitle%>: <%=mainSource.work.ms.project4.descBody%></p>
             </div>
           </div>
         </li>
 
-        <li>
+        <li class="inner-li">
           <%=mainSource.work.ms.project3.title%>
           <button class="btn btn-outline-light btn-sm cv-btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseP3Desc" >
             <i class="fas fa-chevron-down"></i>
@@ -65,13 +65,13 @@
             <div class="card card-body cv-card">
               <p><%=mainSource.work.ms.project3.period%></p>
               <p><%=mainSource.work.ms.project3.role%></p>
-              <p><%=mainSource.work.ms.project3.technologies%> Hadoop (Hive), Excel VBA</p>
+              <p><%=mainSource.work.ms.project3.technologies%> Hadoop (Hive), BASH, Excel VBA</p>
               <p><%=mainSource.work.ms.project3.descTitle%>: <%=mainSource.work.ms.project3.descBody%></p>
             </div>
           </div>
         </li>
 
-        <li>
+        <li class="inner-li">
           <%=mainSource.work.ms.project2.title%>
           <button class="btn btn-outline-light btn-sm cv-btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseP2Desc" >
             <i class="fas fa-chevron-down"></i>
@@ -87,7 +87,7 @@
           </div>
         </li>
 
-        <li>
+        <li class="inner-li">
           <%=mainSource.work.ms.project1.title%>
           <button class="btn btn-outline-light btn-sm cv-btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseP1Desc" >
             <i class="fas fa-chevron-down"></i>
@@ -119,10 +119,29 @@
 
   <div class="collapse" id="collapseXPDesc">
     <div class="card card-body cv-card">
-      <ul>
-        <li><%=mainSource.work.xp.item1%></li>
-        <li><%=mainSource.work.xp.item2%></li>
-        <li><%=mainSource.work.xp.item3%></li>
+      <ul class="no-bullet">
+
+        <li class="inner-li"><%=mainSource.work.xp.operational.title%>
+          <ul>
+            <li><%=mainSource.work.xp.operational.item1%></li>
+            <li><%=mainSource.work.xp.operational.item2%></li>
+            <li><%=mainSource.work.xp.operational.item3%></li>
+          </ul>
+        </li>
+
+        <li class="inner-li"><%=mainSource.work.xp.products.title%>
+          <ul>
+            <li><%=mainSource.work.xp.products.item1%></li>
+          </ul>
+        </li>
+
+        <li class="inner-li"><%=mainSource.work.xp.commercial.title%>
+          <ul>
+            <li><%=mainSource.work.xp.commercial.item1%></li>
+            <li><%=mainSource.work.xp.commercial.item2%></li>
+          </ul>
+        </li>
+
       </ul>
     </div>
   </div>
@@ -159,7 +178,12 @@
   <div class="collapse" id="collapseSIDesc">
     <div class="card card-body cv-card">
       <p><%=mainSource.academicExperience.si.project%></p>
-      <p><%=mainSource.academicExperience.si.activities%></p>
+      <p><%=mainSource.academicExperience.si.activities.title%></p>
+      <ul class="circle-ul">
+        <li><%=mainSource.academicExperience.si.activities.item1%></li>
+        <li><%=mainSource.academicExperience.si.activities.item2%></li>
+        <li><%=mainSource.academicExperience.si.activities.item3%></li>
+      </ul>
     </div>
   </div>
 
@@ -178,8 +202,8 @@
     </div>
   </div>
 
-  <!-- Technologies - TO DO: Add section title to JSON file -->
-  <h3>Technologies</h3>
+  <!-- Technologies -->
+  <h3><%=mainSource.technologies.title%></h3>
 
   <ul class="no-bullet">
 
@@ -213,7 +237,7 @@
 
       <div class="collapse" id="collapseWD">
         <div class="card card-body cv-card">
-          <p>Front-end</p>
+          <p class="inner-title">Front-end</p>
 
           <div class="row">
             <div class="col ds-col">
@@ -230,7 +254,7 @@
             </div>
           </div>
 
-          <p>Back-end</p>
+          <p class="inner-title second-inner-title">Back-end</p>
 
           <div class="row">
 
@@ -263,7 +287,7 @@
       <div class="collapse" id="collapseDB">
         <div class="card card-body cv-card">
 
-          <p>SQL</p>
+          <p class="inner-title">SQL</p>
 
           <div class="row">
 
@@ -281,7 +305,7 @@
 
           </div>
 
-          <p>NoSQL</p>
+          <p class="inner-title  second-inner-title">NoSQL</p>
           <img src="images/MongoDB.png" class="gray-background" alt="" height="100" width="100">
 
         </div>
