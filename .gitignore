@@ -1,4 +1,5 @@
+auth.js
 node_modules
-public/images
 db_queries
 public/cert
+public/images
